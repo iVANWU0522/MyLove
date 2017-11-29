@@ -13,6 +13,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Use paperclip  for image uploading functionality
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
+# Use simple_form to create forms
+gem 'simple_form'
+# Bootstrap
+gem 'bootstrap', '~> 4.0.0.beta2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
