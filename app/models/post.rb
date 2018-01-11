@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   validates :user_id, presence: true
   validates :image, presence: true
+  validates :caption, length: { in: 3..300 }
 
 
   has_attached_file :image, styles: { :medium => "640x", :thumb => "100x100" }
