@@ -1,2 +1,8 @@
-$('#comments_<%= @post.id %>').append("<%= j render 'comments/comment', post: @post, comment: @comment %>");
 $('#comment_content_<%= @post.id %>').val('')
+$('#comment_content_<%= @post.id %>').blur();
+Append.comment_count += 1
+$(Append.id).attr('data-value', Append.comment_count);
+if (Append.comment || Append.open ){ $('#comments_<%= @post.id %>').append("<%=j render 'comments/comment', post: @post, comment: @comment %>"); }
+else if ((Append.comment && Append.open) === false && Append.link === true) {
+}
+else if ((Append.comment && Append.open && Append.link) === false) { $('#more_comments_<%= @post.id %>').html("view all <%= @post.comments.count %> comments"); }
