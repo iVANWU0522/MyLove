@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Paginate posts and comments
 gem 'kaminari', '~> 0.16.3'
+# Like button
+gem 'acts_as_votable', '~> 0.10.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
