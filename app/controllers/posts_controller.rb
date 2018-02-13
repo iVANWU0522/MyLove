@@ -57,6 +57,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def dislike
+    if @post.downvote_from current_user
+      respond_to do |format|
+        format.html {redirect_to :back}
+        format.js
+      end
+    end
+  end
+
   private
 
   def post_params
