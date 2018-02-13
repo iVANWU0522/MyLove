@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
+  acts_as_voter
+
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   validates :user_name, presence: true, length: { minimum: 2, maximum: 16 }
