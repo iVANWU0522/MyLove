@@ -48,6 +48,10 @@ class PostsController < ApplicationController
     redirect_to :action => 'index'
   end
 
+  def like
+
+  end
+
   private
 
   def post_params
