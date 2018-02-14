@@ -10,6 +10,11 @@ module PostsHelper
     'glyphicon-heart-empty'
   end
 
+  def liked_post_link(post)
+    return unlike_post_path(post.id) if current_user.voted_for? post
+    like_post_path(post.id)
+  end
+
   private
 
   def list_likers(votes)
