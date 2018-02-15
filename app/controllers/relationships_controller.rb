@@ -8,7 +8,7 @@ class RelationshipsController < ApplicationController
       end
     end
   end
-  
+
   def unfollow_user
     @user = User.find_by! user_name: params[:user_name]
     if current_user.unfollow @user.id
