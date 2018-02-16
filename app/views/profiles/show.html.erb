@@ -27,7 +27,17 @@
       </p>
       <div class="user-statistics">
         <p>
-          <%= pluralize @user.posts.count, 'post' %>
+          <ul>
+            <li class="follow-list">
+              <%= pluralize @user.posts.count, 'post' %>
+            </li>
+            <li class="follow-list">
+              <a href="#"><%= pluralize @user.followers.count, 'follower' %></a>
+            </li>
+            <li class="follow-list">
+              <a href="#"><%= @user.following.count%> <span>following</span></a>
+            </li>
+          </ul>
         </p>
       </div>
     </div>
