@@ -288,6 +288,21 @@ body {
 }
 
 .user-statistics {
+  ul {
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    li {
+      display: list-item;
+      margin-right: 40px;
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
 
 
 }
