@@ -289,7 +289,7 @@ body {
 
 .user-statistics {
   ul {
-    padding-left: 0px;
+    padding: 0px;
     list-style: none;
     display: flex;
     li {
@@ -300,6 +300,9 @@ body {
       }
       &:last-child {
         margin-right: 0px;
+      }
+      a {
+        color:black;
       }
     }
   }
