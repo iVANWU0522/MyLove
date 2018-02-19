@@ -22,9 +22,7 @@ function DestroyComments(){
     });
 }
 
-$( document ).ready(function() {
-    ClickableCommentsLink();
-    DestroyComments();
+function Comments(){
     $('.comment_content').click (function(){
         Append.id = this;
         Append.post_id = $(this).data("post-id");
@@ -33,4 +31,10 @@ $( document ).ready(function() {
         else if(Append.comment_count == 4){ Append.comment = false; Append.link = true; }
         else if(Append.comment_count > 4){ Append.comment = false; Append.link = false;  }
     })
+}
+
+$( document ).ready(function() {
+    ClickableCommentsLink();
+    DestroyComments();
+    Comments();
 });
