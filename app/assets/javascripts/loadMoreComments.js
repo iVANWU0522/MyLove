@@ -23,6 +23,8 @@ function DestroyComments(){
 }
 
 function Comments(){
+    ClickableCommentsLink();
+    DestroyComments();
     $('.comment_content').click (function(){
         Append.id = this;
         Append.post_id = $(this).data("post-id");
