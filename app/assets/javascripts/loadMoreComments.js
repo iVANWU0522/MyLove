@@ -22,7 +22,7 @@ function DestroyComments(){
     });
 }
 
-function Comments(){
+$( document ).ready(function() {
     ClickableCommentsLink();
     DestroyComments();
     $('.comment_content').click (function(){
@@ -33,10 +33,4 @@ function Comments(){
         else if(Append.comment_count == 4){ Append.comment = false; Append.link = true; }
         else if(Append.comment_count > 4){ Append.comment = false; Append.link = false;  }
     })
-}
-
-$( document ).ready(function() {
-    ClickableCommentsLink();
-    DestroyComments();
-    Comments();
 });
